@@ -26,7 +26,7 @@ const AdminProductForm = () => {
         const productData = { name, price, description };
 
         const method = id ? "PUT" : "POST";
-        const url = id ? `/api/products/${id}` : "/api/products";
+        const url = 'http://localhost:5000'+id ? `/api/products/${id}` : "/api/products";
 
         try {
             const response = await fetch(url, {

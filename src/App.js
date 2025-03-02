@@ -8,6 +8,8 @@ import EditUser from "./components/EditUser";
 import ProductsPage from "./pages/ProductsPage";  // ✅ New Product Page
 import ProductDetailPage from "./pages/ProductDetailPage";  // ✅ Product Details Page
 import AdminProductForm from "./components/AdminProductForm"; // ✅ Admin Add/Edit Form
+import CartPage from "./pages/CartPage";
+import AddProductPage from "./pages/AddProductPage";
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/cart" element={<CartPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/users" element={<UsersPage />} />
@@ -27,6 +30,7 @@ function App() {
         {/* ✅ Admin Routes */}
         <Route path="/admin/products/new" element={<AdminProductForm />} />
         <Route path="/admin/products/edit/:id" element={<AdminProductForm />} />
+        <Route path="/add-product" element={<AddProductPage />} />
       </Routes>
     </Router>
   );
